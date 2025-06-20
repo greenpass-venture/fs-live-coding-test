@@ -1,0 +1,36 @@
+{
+  "name": "fs-live-coding-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.11.0"
+  },
+  "scripts": {
+    "server": "cd packages/server && tsnd -r dotenv/config -- src/index.ts",
+    "client": "cd packages/emissions-dashboard && npm run dev",
+    "install:packages": "npm i && npm --prefix packages/emissions-dashboard install && npm --prefix packages/server install",
+    "test": "cd packages/server && jest --coverage --detectOpenHandles --logHeapUsage"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "lodash": "^4.17.21",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "eslint": "~9.21.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.6",
+    "ts-node": "~10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "~5.7.3"
+  }
+}

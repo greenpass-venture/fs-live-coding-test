@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "engines": {
+    "node": ">=16.13.2",
+    "npm": ">=8.11.0"
+  },
+  "scripts": {
+    "test": "jest --coverage --detectOpenHandles --logHeapUsage"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "^8.2.1",
+    "fastify": "^4.28.1"
+  },
+  "devDependencies": {
+    "ts-jest": "^29.2.6",
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0"
+  }
+}
